@@ -3,8 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untitled Charakteres Guide by Qwasker (@qwasker)</title>
+  <title>Untitled Charakteres Guide by Qwasker (@qwasker)</title
   <link rel="stylesheet" href="../../../assets/style.css">
+  <style>
+    /* ==========================================================================
+   THE ULTIMATE GEOCITIES GUIDE SITE STYLESHEET
+   ========================================================================== */
+
+body {
+  background-color: #0000aa; /* Bright blue background */
+  color: #ffff00; /* Neon yellow text */
+  font-family: "Comic Sans MS", "Courier New", cursive;
+  margin: 0;
+  padding: 0;
+  /* Let's repeat a starry background everywhere because tiling is life */
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-repeat: repeat;
+}
+
+/* --- LAYOUT STRUCTURE --- */
+
+/* Main layout wrapper using a classic clunky flex grid */
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* The mandatory left-side navigation panel */
+.sidebar-nav {
+  width: 200px;
+  background-color: #000000;
+  border-right: 5px ridge #ff00ff;
+  padding: 15px;
+  text-align: left;
+}
+
+.sidebar-nav h3 {
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 2px dashed #00ffff;
+  padding-bottom: 5px;
+}
+
+.sidebar-nav ul {
+  list-style-type: "➔ ";
+  padding-left: 20px;
+}
+
+.sidebar-nav li {
+  margin-bottom: 10px;
+}
+
+/* The main content well where the guide actually lives */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center; /* Center-align text by default, obviously */
+}
+
+/* --- TYPOGRAPHY & HEADERS --- */
+
+h1, h2, h3 {
+  color: #ff00ff; /* Hot pink headers */
+  text-shadow: 2px 2px #00ff00, -2px -2px #ff0000; /* Dual neon shadow for extra eye strain */
+  font-weight: bold;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 28px; }
+
+/* The text under headers telling people when the guide was last updated */
+.last-updated {
+  color: #00ff00;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* --- LINKS --- */
+
+a {
+  color: #00ffff; /* Cyan links */
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff00ff;
+  background-color: #ffff00; /* Blinding highlight on hover */
+  cursor: url('pointer.ani'), url('pointer.cur'), default; /* Custom cursor vibes */
+}
+
+/* --- GUIDE SPECIFIC CONTENT BLOCKS --- */
+
+/* Use this for "PRO-TIPS" or "SECRET TRICKS" in your guide */
+.guide-tip {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: 4px inset #ffff00;
+  padding: 15px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: left;
+  font-size: 16px;
+}
+
+.guide-tip::before {
+  content: "🔥 PRO-TIP: ";
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Use this for caution/warnings (e.g., "Don't save here or the game crashes!!") */
+.guide-warning {
+  background-color: #ffff00;
+  color: #000000;
+  border: 5px double #ff0000;
+  padding: 15px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* For guide code blocks, cheat codes, or stats tables */
+.guide-stats-box {
+  background-color: #000000;
+  color: #00ff00; /* Terminal green */
+  font-family: "Courier New", monospace;
+  border: 3px solid #00ff00;
+  padding: 10px;
+  margin: 15px auto;
+  width: 70%;
+  text-align: left;
+  white-space: pre-line;
+}
+
+/* --- MEDIA & ELEMENTS --- */
+
+marquee {
+  font-size: 20px;
+  color: #ff0000;
+  background-color: #ffff00;
+  font-weight: bold;
+  border: 2px solid #ff00ff;
+  margin-bottom: 20px;
+}
+
+img {
+  border: 5px ridge #ff00ff; /* Chunky borders around screenshots */
+}
+
+/* Mandatory Construction/Web Badge Section at the bottom */
+.web-badges {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.web-badges img {
+  border: none; /* Web badges don't get the chunky border */
+  width: 88px;
+  height: 31px;
+}
+
+hr {
+  border: 3px dashed #00ff00;
+  height: 0;
+  width: 90%;
+  margin: 30px auto;
+}
+
+/* --- INTERACTIVE / GUESTBOOK ELEMENTS --- */
+
+/* Guestbook form container */
+.guestbook-section {
+  border: 4px outset #00ffff;
+  background-color: #111111;
+  padding: 20px;
+  width: 60%;
+  margin: 40px auto;
+}
+
+input[type="text"], textarea {
+  background-color: #000055;
+  color: #ffff00;
+  border: 2px solid #ff00ff;
+  font-family: "Comic Sans MS", cursive;
+  padding: 5px;
+}
+
+button, input[type="submit"] {
+  background-color: #ff00ff;
+  color: #ffffff;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  border: 3px raised #ffffff;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+button:active, input[type="submit"]:active {
+  border: 3px sunk #ffffff;
+}
+
+/* --- FLOATING MASCOT (Netscape/IE Helper) --- */
+
+.mascot {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 120px; /* Made a bit smaller so it doesn't block text */
+  height: auto;
+  z-index: 999;
+}
+
+.mascot-text {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #c0c0c0; /* Classic Win95 gray */
+  color: #000000;
+  padding: 8px;
+  border: 2px raised #ffffff;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  box-shadow: 2px 2px 0px #000000;
+  z-index: 999;
+}
+  </style>
   
 </head>
 <body id="preview">
@@ -52,6 +281,6 @@
 <p class="has-line-data" data-line-start="20" data-line-end="23">(a few text has been borrowed from wikipedia but wikipedia’s citations are mentioned here and stuff. This is just a guide to making and using Charaktêres.)<br>
 <code>1.</code> <code>[György Németh (2020). &quot;Charaktêres on Curse Tablets In the Western Provinces of the Roman Empire&quot;. In Gordon, R.; Marco Simón, F.; Piranomonte, M. (eds.). Choosing Magic: Contexts, Objects, Meanings: The Archaeology of Instrumental Religion in the Latin West. De Luca Editori d’Arte. pp. 125–138.]</code><br>
 <code>2.</code>  <code>Kirsten Dzwiza (2013). Schriftverwendung in antiker Ritualpraxis anhand der griechischen, demotischen und koptischen Praxisanleitungen des 1. - 7. Jahrhunderts (Thesis). Universität Erfurt.</code></p>
-<p> This stuff takes time and effort to write, so if you support my work, please <a href="../../../donate.html">Plwease downate!~! <3</a> </p>
+<p> This stuff takes time and effort to write, so if you support my work, please <a href="../../../donate.html">Plwease dwonate!~! <3</a> </p>
 </body>
 </html>
