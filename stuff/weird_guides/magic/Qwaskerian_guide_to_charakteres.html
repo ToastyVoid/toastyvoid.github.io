@@ -3,284 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untitled Charakteres Guide by Qwasker (@qwasker)</title
-  <link rel="stylesheet" href="../../../assets/style.css">
-  <style>
-    /* ==========================================================================
-   THE ULTIMATE GEOCITIES GUIDE SITE STYLESHEET
-   ========================================================================== */
-
-body {
-  background-color: #0000aa; /* Bright blue background */
-  color: #ffff00; /* Neon yellow text */
-  font-family: "Comic Sans MS", "Courier New", cursive;
-  margin: 0;
-  padding: 0;
-  /* Let's repeat a starry background everywhere because tiling is life */
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-  background-repeat: repeat;
-}
-
-/* --- LAYOUT STRUCTURE --- */
-
-/* Main layout wrapper using a classic clunky flex grid */
-.site-wrapper {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* The mandatory left-side navigation panel */
-.sidebar-nav {
-  width: 200px;
-  background-color: #000000;
-  border-right: 5px ridge #ff00ff;
-  padding: 15px;
-  text-align: left;
-}
-
-.sidebar-nav h3 {
-  font-size: 18px;
-  text-align: center;
-  border-bottom: 2px dashed #00ffff;
-  padding-bottom: 5px;
-}
-
-.sidebar-nav ul {
-  list-style-type: "➔ ";
-  padding-left: 20px;
-}
-
-.sidebar-nav li {
-  margin-bottom: 10px;
-}
-
-/* The main content well where the guide actually lives */
-.main-content {
-  flex: 1;
-  padding: 20px;
-  text-align: center; /* Center-align text by default, obviously */
-}
-
-/* --- TYPOGRAPHY & HEADERS --- */
-
-h1, h2, h3 {
-  color: #ff00ff; /* Hot pink headers */
-  text-shadow: 2px 2px #00ff00, -2px -2px #ff0000; /* Dual neon shadow for extra eye strain */
-  font-weight: bold;
-}
-
-h1 { font-size: 36px; }
-h2 { font-size: 28px; }
-
-/* The text under headers telling people when the guide was last updated */
-.last-updated {
-  color: #00ff00;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-/* --- LINKS --- */
-
-a {
-  color: #00ffff; /* Cyan links */
-  font-weight: bold;
-}
-
-a:hover {
-  color: #ff00ff;
-  background-color: #ffff00; /* Blinding highlight on hover */
-  cursor: url('pointer.ani'), url('pointer.cur'), default; /* Custom cursor vibes */
-}
-
-/* --- GUIDE SPECIFIC CONTENT BLOCKS --- */
-
-/* Use this for "PRO-TIPS" or "SECRET TRICKS" in your guide */
-.guide-tip {
-  background-color: #ff0000;
-  color: #ffffff;
-  border: 4px inset #ffff00;
-  padding: 15px;
-  margin: 20px auto;
-  width: 80%;
-  text-align: left;
-  font-size: 16px;
-}
-
-.guide-tip::before {
-  content: "🔥 PRO-TIP: ";
-  font-weight: bold;
-  font-size: 18px;
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Use this for caution/warnings (e.g., "Don't save here or the game crashes!!") */
-.guide-warning {
-  background-color: #ffff00;
-  color: #000000;
-  border: 5px double #ff0000;
-  padding: 15px;
-  margin: 20px auto;
-  width: 80%;
-  text-align: left;
-  font-weight: bold;
-}
-
-/* For guide code blocks, cheat codes, or stats tables */
-.guide-stats-box {
-  background-color: #000000;
-  color: #00ff00; /* Terminal green */
-  font-family: "Courier New", monospace;
-  border: 3px solid #00ff00;
-  padding: 10px;
-  margin: 15px auto;
-  width: 70%;
-  text-align: left;
-  white-space: pre-line;
-}
-
-/* --- MEDIA & ELEMENTS --- */
-
-marquee {
-  font-size: 20px;
-  color: #ff0000;
-  background-color: #ffff00;
-  font-weight: bold;
-  border: 2px solid #ff00ff;
-  margin-bottom: 20px;
-}
-
-img {
-  border: 5px ridge #ff00ff; /* Chunky borders around screenshots */
-}
-
-/* Mandatory Construction/Web Badge Section at the bottom */
-.web-badges {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.web-badges img {
-  border: none; /* Web badges don't get the chunky border */
-  width: 88px;
-  height: 31px;
-}
-
-hr {
-  border: 3px dashed #00ff00;
-  height: 0;
-  width: 90%;
-  margin: 30px auto;
-}
-
-/* --- INTERACTIVE / GUESTBOOK ELEMENTS --- */
-
-/* Guestbook form container */
-.guestbook-section {
-  border: 4px outset #00ffff;
-  background-color: #111111;
-  padding: 20px;
-  width: 60%;
-  margin: 40px auto;
-}
-
-input[type="text"], textarea {
-  background-color: #000055;
-  color: #ffff00;
-  border: 2px solid #ff00ff;
-  font-family: "Comic Sans MS", cursive;
-  padding: 5px;
-}
-
-button, input[type="submit"] {
-  background-color: #ff00ff;
-  color: #ffffff;
-  font-family: "Comic Sans MS", cursive;
-  font-weight: bold;
-  border: 3px raised #ffffff;
-  padding: 5px 15px;
-  cursor: pointer;
-}
-
-button:active, input[type="submit"]:active {
-  border: 3px sunk #ffffff;
-}
-
-/* --- FLOATING MASCOT (Netscape/IE Helper) --- */
-
-.mascot {
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  width: 120px; /* Made a bit smaller so it doesn't block text */
-  height: auto;
-  z-index: 999;
-}
-
-.mascot-text {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color: #c0c0c0; /* Classic Win95 gray */
-  color: #000000;
-  padding: 8px;
-  border: 2px raised #ffffff;
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  box-shadow: 2px 2px 0px #000000;
-  z-index: 999;
-}
-  </style>
+  <title>Untitled_Document (1).html</title>
   
 </head>
 <body id="preview">
-<h1 class="code-line has-line-data" data-line-start="0" data-line-end="1"><a id="Charaktres_0"></a>Charaktêres</h1>
-<p class="has-line-data" data-line-start="1" data-line-end="3"><em><strong>IMPORTANT!</strong></em>: This guide is still under development (about 85% complete.) but will be completed VERY soon!<br>
-<sub><sub>Written by Qwasker (@qwasker) on the Witching Hour discord server.</sub></sub></p>
+<p class="has-line-data" data-line-start="0" data-line-end="1">Untitled_Document.md</p>
+<h1 class="code-line has-line-data" data-line-start="2" data-line-end="3"><a id="Charaktres_2"></a>Charaktêres</h1>
+<p class="has-line-data" data-line-start="4" data-line-end="6"><em><strong>IMPORTANT!</strong></em>: This guide is still under development (about 87% complete.) but will be completed VERY soon! If you can provide support in here to complete this guide, please help us then!<br>
+Written by Qwasker (@qwasker) on the Witching Hour discord server.</p>
 <ul>
-<li class="has-line-data" data-line-start="3" data-line-end="5">So… what are Charaktêres (singular: charaktêr)? Well, they’re a thing in Graeco-egyptian, jewish, and arabic magic that are letter-shaped signs lacking both sematic and phonetic correlations[1]. In her 2013 thesis Kirsten Dzwiza studied 94 magical texts and recorded 699 different charaktêres occurring over 943 times.[2] The character forms are mostly nonsensical and may include ring-letters, balls, points, closed elements, separate strokes, linear elements, small element, and hieroglyphs.[2] The most common forms consist of asterisks and configurations of straight lines with small circles at their ends.[3] The signs appear mostly on apotropaic spells and phylacteries, but also on a few ancient curse tablets.[1] NOW… how to use them? HMMMMMM??? HUH HUH HUH? WELL… <em>first, you have to make a charaktêr/charaktêres</em>. And how? Well. Here is how!:</li>
+<li class="has-line-data" data-line-start="7" data-line-end="9">So… what are Charaktêres (singular: charaktêr)? Well, they’re a thing in Graeco-egyptian, jewish, and arabic magic that are letter-shaped signs lacking both sematic and phonetic correlations[1]. In her 2013 thesis Kirsten Dzwiza studied 94 magical texts and recorded 699 different charaktêres occurring over 943 times.[2] The character forms are mostly nonsensical and may include ring-letters, balls, points, closed elements, separate strokes, linear elements, small element, and hieroglyphs.[2] The most common forms consist of asterisks and configurations of straight lines with small circles at their ends.[3] The signs appear mostly on apotropaic spells and phylacteries, but also on a few ancient curse tablets.[1] NOW… how to use them? HMMMMMM??? HUH HUH HUH? WELL… <em>first, you have to make a charaktêr/charaktêres</em>. And how? Well. Here is how!:</li>
 </ul>
-<p class="has-line-data" data-line-start="5" data-line-end="7"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_yU4JXJRuCGqSsVOM1byM-zJd8RtATr0lpbKjS4Ab9d1yOpiy6vCaT8&amp;s=10" alt="Charaktêres"><br>
-<sub>A example of a charaktêr. Source: The Museum of Witchcraft and Magic</sub></p>
-<h1 class="code-line has-line-data" data-line-start="8" data-line-end="9"><a id="A_guide_to_making_charaktres_8"></a>A guide to making charaktêres!</h1>
+<p class="has-line-data" data-line-start="9" data-line-end="15"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_yU4JXJRuCGqSsVOM1byM-zJd8RtATr0lpbKjS4Ab9d1yOpiy6vCaT8&amp;s=10" alt="Charaktêres"><br>
+<sub> A example of a charaktêr. Source: The Museum of Witchcraft and Magic </sub><br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Goetia_seal_of_solomon.svg/960px-Goetia_seal_of_solomon.svg.png" alt="Charakteres On the seal Of SOlOmOn"><br>
+<sub> Secret Seal Of Solomon, i do not support him in terms of magic as his way of magic used force while ignoring the spirit’s free will. I put this here as an example. YOu can see the charaktêres around the seal to the show the usage of charaktêres! </sub><br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Late_Arabic_Picatrix_manuscript_Hamidiye_Library%2C_MS_852_fol_45v.jpg/960px-Late_Arabic_Picatrix_manuscript_Hamidiye_Library%2C_MS_852_fol_45v.jpg" alt="Charakteres in the Picatrix (Real name: Ghayat Al-Hakim)"><br>
+<sub> Charaktêres in the Picatrix (a.k.a: Ghayat Al-Hakim) </sub></p>
+<h1 class="code-line has-line-data" data-line-start="16" data-line-end="17"><a id="A_guide_to_making_charaktres_16"></a>A guide to making charaktêres!</h1>
 <ul>
-<li class="has-line-data" data-line-start="9" data-line-end="10">Draw a shape, here, we’ll take two intersecting lines.</li>
-<li class="has-line-data" data-line-start="10" data-line-end="11">
+<li class="has-line-data" data-line-start="18" data-line-end="19">Draw a shape, here, we’ll take two intersecting lines.</li>
+<li class="has-line-data" data-line-start="19" data-line-end="20">
 <ul>
-<li class="has-line-data" data-line-start="10" data-line-end="11">Now normally, in making a charaktêr, what we do is put a circle on the end point (or the terminal points). The circle should not be big, it should be small (like a node).</li>
-</ul>
-</li>
-<li class="has-line-data" data-line-start="11" data-line-end="12">If two lines intersect, what we do is put a node on the intersection.</li>
-<li class="has-line-data" data-line-start="12" data-line-end="13">If two lines touch to form a sharp corner, put a node there.</li>
-<li class="has-line-data" data-line-start="13" data-line-end="14">Basically</li>
-<li class="has-line-data" data-line-start="14" data-line-end="15">
-<ul>
-<li class="has-line-data" data-line-start="14" data-line-end="15">Cap the loose ends/Terminal points</li>
+<li class="has-line-data" data-line-start="19" data-line-end="20">Now normally, in making a charaktêr, what we do is put a circle on the end point (or the terminal points). The circle should not be big, it should be small (like a node).</li>
 </ul>
 </li>
-<li class="has-line-data" data-line-start="15" data-line-end="16">
+<li class="has-line-data" data-line-start="20" data-line-end="21">If two lines intersect, what we do is put a node on the intersection.</li>
+<li class="has-line-data" data-line-start="21" data-line-end="22">If two lines touch to form a sharp corner, put a node there.</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23">Basically</li>
+<li class="has-line-data" data-line-start="23" data-line-end="24">
 <ul>
-<li class="has-line-data" data-line-start="15" data-line-end="16">Cap the sharp points</li>
+<li class="has-line-data" data-line-start="23" data-line-end="24">Cap the loose ends/Terminal points</li>
 </ul>
 </li>
-<li class="has-line-data" data-line-start="16" data-line-end="17">
+<li class="has-line-data" data-line-start="24" data-line-end="25">
 <ul>
-<li class="has-line-data" data-line-start="16" data-line-end="17">Cap the intersections</li>
+<li class="has-line-data" data-line-start="24" data-line-end="25">Cap the sharp points</li>
 </ul>
 </li>
-<li class="has-line-data" data-line-start="17" data-line-end="19">
+<li class="has-line-data" data-line-start="25" data-line-end="26">
 <ul>
-<li class="has-line-data" data-line-start="17" data-line-end="19">That’s it</li>
+<li class="has-line-data" data-line-start="25" data-line-end="26">Cap the intersections</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="26" data-line-end="28">
+<ul>
+<li class="has-line-data" data-line-start="26" data-line-end="28">That’s it</li>
 </ul>
 </li>
 </ul>
-<h3 class="code-line has-line-data" data-line-start="19" data-line-end="20"><a id="Sources_19"></a>Sources</h3>
-<p class="has-line-data" data-line-start="20" data-line-end="23">(a few text has been borrowed from wikipedia but wikipedia’s citations are mentioned here and stuff. This is just a guide to making and using Charaktêres.)<br>
+<h3 class="code-line has-line-data" data-line-start="28" data-line-end="29"><a id="Things_to_note_28"></a>Things to note</h3>
+<ul>
+<li class="has-line-data" data-line-start="29" data-line-end="30">Do not try to translate Charaktêres, they are supposed to be untranslatable.</li>
+<li class="has-line-data" data-line-start="30" data-line-end="31">Do not try to make charaktêres have meaning (like some charaktêr meaning A or B). They are supposed to be untranslatable.</li>
+<li class="has-line-data" data-line-start="31" data-line-end="34">Do not make the charaktêres have a script (unless…?).</li>
+</ul>
+<h4 class="code-line has-line-data" data-line-start="34" data-line-end="35"><a id="ENJOY_MAGICKING_34"></a>ENJOY MAGICKING!</h4>
+<p class="has-line-data" data-line-start="35" data-line-end="36"><sub> (And stay safe!) </sub></p>
+<h3 class="code-line has-line-data" data-line-start="37" data-line-end="38"><a id="Support_37"></a>Support</h3>
+<p class="has-line-data" data-line-start="38" data-line-end="39">If you really support my work, you can donate to me! <a href="https://toastyvoid.github.io/donate.html">Dwonatwe here~!</a></p>
+<h3 class="code-line has-line-data" data-line-start="40" data-line-end="41"><a id="Sources_40"></a>Sources</h3>
+<p class="has-line-data" data-line-start="42" data-line-end="46">(a few text has been borrowed from wikipedia but wikipedia’s citations are mentioned here and stuff. This is just a guide to making and using Charaktêres.)<br>
 <code>1.</code> <code>[György Németh (2020). &quot;Charaktêres on Curse Tablets In the Western Provinces of the Roman Empire&quot;. In Gordon, R.; Marco Simón, F.; Piranomonte, M. (eds.). Choosing Magic: Contexts, Objects, Meanings: The Archaeology of Instrumental Religion in the Latin West. De Luca Editori d’Arte. pp. 125–138.]</code><br>
-<code>2.</code>  <code>Kirsten Dzwiza (2013). Schriftverwendung in antiker Ritualpraxis anhand der griechischen, demotischen und koptischen Praxisanleitungen des 1. - 7. Jahrhunderts (Thesis). Universität Erfurt.</code></p>
-<p> This stuff takes time and effort to write, so if you support my work, please <a href="../../../donate.html">Plwease dwonate!~! <3</a> </p>
+<code>2.</code> <code>Kirsten Dzwiza (2013). Schriftverwendung in antiker Ritualpraxis anhand der griechischen, demotischen und koptischen Praxisanleitungen des 1. - 7. Jahrhunderts (Thesis). Universität Erfurt.</code><br>
+<code>3.</code>  <code>Frankfurter, David. &quot;The Magic of Writing in Mediterranea Antiquity&quot;. Guide to the Study of Ancient Magic. Brill. pp. 626–658.</code></p>
+
 </body>
 </html>
